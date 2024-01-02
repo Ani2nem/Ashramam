@@ -1,0 +1,35 @@
+.navbar-section{
+    height: 4.3rem;
+    width: 100%;
+    padding: 0rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+}
+
+
+.nav-item{
+    margin: 8rem;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    align-items: center; 
+}
+.nav-item:hover{
+    color:rgb(255,191,0);
+    padding-bottom: 0.5rem;
+    transition: 0.3s;
+}
+.nav-item:active{
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+}

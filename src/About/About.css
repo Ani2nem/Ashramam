@@ -1,0 +1,35 @@
+.about-section{
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100rem;
+    top: 38rem;
+}
+
+.about-title{
+    color:rgb(255,191,0);
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.about-text{
+    position: relative;
+    left: 50%;
+    max-width: 43rem;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    line-height: 2.5rem;
+    text-align: left;
+    color: rgb(255, 102, 0);
+    margin-top: 3rem;
+}
+
+.founder-img{
+    position: absolute;
+    top: 9rem;
+    left: 1.5%;
+    width: 43rem;
+    height: 30rem;
+}

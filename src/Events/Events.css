@@ -1,0 +1,10 @@
+.events-section{
+    position: absolute;
+    color: rgb(255,191,0);
+    top: 78rem;
+    left: 43%;
+}
+
+.events-text{
+    font-size: 50px;
+}
