@@ -1,6 +1,6 @@
-.donate-title{
+.donate-button{
     position: absolute;
-    top: 120rem;
+    top: 123rem;
     left: 35%;
     background-color:rgb(255,191,0);
     color: white;
@@ -11,15 +11,15 @@
     height: 5rem;
     border-radius: 10px;
 }
-.donate-title:hover{
+.donate-button:hover{
     color: black;
 }
-.donate-title:active{
+.donate-button:active{
     color: rgb(255,191,0);
 }
 .donation-title{
     position: absolute;
-    top: 110rem;
+    top: 114rem;
     left: 30%;
     font-weight: 800;
     color: black;
@@ -30,7 +30,7 @@
 .donation-message{
     color:black;
     position: absolute;
-    top: 130rem;
+    top: 132rem;
     left: 150px;
     max-width: 70rem;
     text-align: center;
