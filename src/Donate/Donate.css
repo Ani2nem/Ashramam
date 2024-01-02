@@ -1,9 +1,40 @@
 .donate-title{
     position: absolute;
-    top: 100rem;
-    left: 42.8%;
-    color:rgb(255,191,0);
+    top: 120rem;
+    left: 35%;
+    background-color:rgb(255,191,0);
+    color: white;
     text-align: center;
     font-weight: bold;
     font-size: 3rem;
+    width: 25rem;
+    height: 5rem;
+    border-radius: 10px;
+}
+.donate-title:hover{
+    color: black;
+}
+.donate-title:active{
+    color: rgb(255,191,0);
+}
+.donation-title{
+    position: absolute;
+    top: 110rem;
+    left: 30%;
+    font-weight: 800;
+    color: black;
+    font-size: 45px;
+    color: rgb(255,191,0);
+}
+
+.donation-message{
+    color:black;
+    position: absolute;
+    top: 130rem;
+    left: 150px;
+    max-width: 70rem;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+
 }
