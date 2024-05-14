@@ -1,14 +1,14 @@
 .donate-button{
     position: absolute;
-    top: 123rem;
+    top: 136vw;
     left: 35%;
     background-color:rgb(255,191,0);
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 3rem;
-    width: 25rem;
-    height: 5rem;
+    font-size: 3vw;
+    width: 25vw;
+    height: 5vw;
     border-radius: 10px;
 }
 .donate-button:hover{
@@ -19,22 +19,22 @@
 }
 .donation-title{
     position: absolute;
-    top: 114rem;
-    left: 30%;
+    top: 125vw;
+    left: 17.5%;
     font-weight: 800;
     color: black;
-    font-size: 45px;
+    font-size: 3.3vw;
     color: rgb(255,191,0);
 }
 
 .donation-message{
     color:black;
     position: absolute;
-    top: 132rem;
-    left: 150px;
-    max-width: 70rem;
+    top: 145vw;
+    left: 13vw;
+    max-width: 70vw;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5vw;
     color: black;
 
 }
