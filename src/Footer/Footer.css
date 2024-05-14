@@ -1,43 +1,44 @@
 .footer-section{
     position: absolute;
-    top: 140rem;
+    top: 160vw;
     background-color: black;
-    height: 18rem;
+    height: 20vw;
     width: 100%;
+    font-size: 1.1vw;
 }
 
 .footer-address{
     color: white;
     text-align: center;
-    max-width: 30rem;
+    max-width: 30vw;
     position: relative;
-    left: 32.5%;
-    line-height: 2rem;
-    margin-top: 1rem;
+    left: 32%;
+    line-height: 2vw;
+    margin-top: 1vw;
 }
 
 .logos{
     position: absolute;
     display:flex;
-    top: 13rem;
-    left: 38.2rem;
-    height: 45px;
-    width: 45px;
+    top: 15vw;
+    left: 39vw;
+    height: 3vw;
+    width: 7vw;
     justify-content: space-between;
 }
 
 .facebook-logo{
-    margin-right: 2rem;
+    margin-right: 3vw;
 }
 .instagram-logo{
-    margin-right: 2rem;
+    margin-right: 3vw;
 }
 
 .maps-logo{
     position: absolute;
     display: flex;
-    top: 8rem;
-    left: 41rem;
-    height: 55px;
+    top: 9vw;
+    left: 43vw;
+    height: 4vw;
     justify-content: space-between;
 }
