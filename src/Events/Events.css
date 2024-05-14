@@ -1,12 +1,12 @@
 .events-section {
     position: absolute;
     color: rgb(255, 191, 0);
-    top: 79rem;
+    top: 89vw;
     left: 43%;
 }
 
 .events-text {
-    font-size: 50px;
+    font-size: 3.4vw;
 }
 
 .table {
