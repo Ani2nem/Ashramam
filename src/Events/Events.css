@@ -17,4 +17,29 @@
     width: 80vw;
     height: 40vw;
     left: -35vw;
+    z-index: -3;
+    font-size: 1.1vw;
 }
+
+ /* Your custom styles for the month display */
+.rbc-toolbar-label {
+    position: absolute;
+    font-size: 2vw;
+    left: 0vw;
+    font-weight: bold;
+    color: #009800; 
+  }
+  .rbc-toolbar{
+    width: 100%;
+    height: 3vw;
+  }
+  .rbc-toolbar button{
+    border: none !important;
+    font-size: 1vw;
+    padding: .375vw 1vw !important;
+    position: absolute;
+    left: 38vw;
+  }
+
+
+ 
