@@ -1,7 +1,7 @@
 .events-section {
     position: absolute;
     color: rgb(255, 123, 0);
-    top: 87vw;
+    top: 88vw;
     left: 43%;
 }
 
@@ -9,14 +9,15 @@
     position: absolute;
     font-size: 3.4vw;
     color:rgb(255, 191, 0);
+    left: 0.5vw;
 }
 
 .calendar-js{
     position: absolute;
-    top: 10vw;
+    top: 8vw;
     width: 80vw;
     height: 40vw;
-    left: -35vw;
+    left: -34.2vw;
     z-index: -3;
     font-size: 1.1vw;
 }
@@ -37,8 +38,7 @@
     border: none !important;
     font-size: 1vw;
     padding: .375vw 1vw !important;
-    position: absolute;
-    left: 38vw;
+    position: relative;
   }
 
 

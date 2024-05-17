@@ -1,6 +1,6 @@
 .footer-section{
     position: absolute;
-    top: 165vw;
+    top: 166vw;
     background-color: black;
     height: 20vw;
     width: 100%;
@@ -12,7 +12,7 @@
     text-align: center;
     max-width: 30vw;
     position: relative;
-    left: 32%;
+    left: 34.7%;
     line-height: 2vw;
     margin-top: 1vw;
 }
@@ -21,7 +21,7 @@
     position: absolute;
     display:flex;
     top: 15vw;
-    left: 39vw;
+    left: 41.65vw;
     height: 3vw;
     width: 7vw;
     justify-content: space-between;
@@ -38,7 +38,8 @@
     position: absolute;
     display: flex;
     top: 9vw;
-    left: 43vw;
+    left: 45.7vw;
+    border-radius: 3%;
     height: 4vw;
     justify-content: space-between;
 }

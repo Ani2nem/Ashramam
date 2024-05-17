@@ -1,7 +1,7 @@
 .donate-button{
     position: absolute;
     top: 149vw;
-    left: 34%;
+    left: 36.8%;
     background-color:rgb(255,191,0);
     color: white;
     text-align: center;
@@ -20,7 +20,7 @@
 .donation-title{
     position: absolute;
     top: 140vw;
-    left: 17.5%;
+    left: 21%;
     font-weight: 800;
     color: black;
     font-size: 3.3vw;
@@ -31,7 +31,7 @@
     color:black;
     position: absolute;
     top: 156vw;
-    left: 13vw;
+    left: 15vw;
     max-width: 70vw;
     text-align: center;
     font-size: 1.5vw;
