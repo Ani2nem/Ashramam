@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { CardElement, useElements, useStripe, Elements } from '@stripe/react-stripe-js';
 import './Donate.css';
 
-const stripePromise = loadStripe('your-public-key');
+const stripePromise = loadStripe('pk_test_51PHyASJtWCb49VjheumpMIcYRN8CZ0osD5zxBceBKr9tJywy9wr8APhrbCUl2THuDnW3zk6QuQu8FPiDIPIX7x9500Anv1tmFH');
 
 const Donate = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -23,7 +23,7 @@ const Donate = () => {
 
     const handleConfirmDonation = async () => {
         try {
-            const response = await fetch('.././server/create-payment-intent', {
+            const response = await fetch('http://localhost:3000/create-payment-intent', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ amount: parseInt(amount) * 100 }), // Convert amount to cents
@@ -38,26 +38,25 @@ const Donate = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         if (!stripe || !elements) {
             return;
         }
-
-        const cardElement = elements.getElement(CardElement);
-
-        const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+    
+        const { paymentIntent, error } = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
-                card: cardElement,
+                card: elements.getElement(CardElement),
             },
         });
-
+    
         if (error) {
             console.error(error.message);
         } else if (paymentIntent.status === 'succeeded') {
             console.log('Payment succeeded!');
+            // Redirect to success page or handle confirmation logic here
         }
     };
-
+    
     const handleClickOutside = (event) => {
         if (popupRef.current && !popupRef.current.contains(event.target)) {
             setIsPopupOpen(false);
