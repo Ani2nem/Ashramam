@@ -10,9 +10,17 @@ const Footer = () => {
                 <img src="maps.jpeg" alt="maps-logo"></img>
             </a>
             <div className='logos'>
-            <img className="facebook-logo" src="social-facebook.svg" alt="facebook-logo"></img>
-            <img className="instagram-logo" src="instagram.svg" alt="instagram-logo"></img>
-            <img className="whatsapp-logo" src="whatsapp.svg" alt="whatsapp-logo"></img>
+                <a className="facebook-logo" rel="noreferrer" href="https://m.facebook.com/people/Sri-sainath-ashraram-bowrampet/100067029424352/" target="_blank">
+                     <img src="social-facebook.svg" alt="facebook-logo"></img>
+                </a>
+
+                <a className="instagram-logo" rel="noreferrer" href="https://www.instagram.com/" target="_blank">
+                     <img src="instagram.svg" alt="instagram-logo"></img>
+                </a>
+
+                <a className="whatsapp-logo" rel="noreferrer" href="https://www.whatsapp.com/" target="_blank">
+                     <img src="whatsapp.svg" alt="whatsapp-logo"></img>
+                </a>
             </div>
         </section>
     )

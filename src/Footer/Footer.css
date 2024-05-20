@@ -21,7 +21,7 @@
     position: absolute;
     display:flex;
     top: 15vw;
-    left: 41.65vw;
+    left: 42.2vw;
     height: 3vw;
     width: 7vw;
     justify-content: space-between;
@@ -32,6 +32,13 @@
 }
 .instagram-logo{
     margin-right: 3vw;
+}
+
+.facebook-logo img,
+.instagram-logo img,
+.whatsapp-logo img {
+  width: 2.6vw; /* Adjust width as needed */
+  height: 2.6vw; /* Adjust height as needed */
 }
 
 .maps-logo{
