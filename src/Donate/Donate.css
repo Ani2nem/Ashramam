@@ -57,19 +57,20 @@
 }
 
 .popup-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
     color: green;
+
 }
 
 .popup-content input {
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 1vw;
+    margin-bottom: 2vw;
     width: 100%;
     box-sizing: border-box;
 }
 
 .popup-content button {
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     background-color: rgb(255,191,0);;
     color: white;
     font-weight: 800;

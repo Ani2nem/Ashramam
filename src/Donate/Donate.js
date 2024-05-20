@@ -31,11 +31,20 @@ const Donate = () => {
     };
 
     const handleConfirmDonation = async () => {
+        
+        // Check if amount is a valid number
+        if (isNaN(amount) || amount.trim() === "") {
+            showToast("Please enter a valid amount.");
+            return; // Exit the function if amount is invalid
+        }
+        
         try {
+            const numericAmount = parseFloat(amount);
+
             const response = await fetch('http://localhost:3000/create-payment-intent', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ amount: parseInt(amount) * 100 }), // Convert amount to cents
+                body: JSON.stringify({ amount: parseInt(numericAmount) * 100 }), // Convert amount to cents
             });
             const data = await response.json();
             setClientSecret(data.clientSecret);
@@ -103,7 +112,7 @@ const Donate = () => {
                             type='number'
                             value={amount}
                             onChange={handleAmountChange}
-                            placeholder='Enter amount in USD'
+                            placeholder='Enter amount in Rupees'
                         />
                         <button onClick={handleConfirmDonation}>Confirm Donation</button>
                     </div>
