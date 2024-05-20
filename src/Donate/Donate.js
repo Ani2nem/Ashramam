@@ -1,9 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { CardElement, useElements, useStripe, Elements } from '@stripe/react-stripe-js';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Donate.css';
 
 const stripePromise = loadStripe('pk_test_51PHyASJtWCb49VjheumpMIcYRN8CZ0osD5zxBceBKr9tJywy9wr8APhrbCUl2THuDnW3zk6QuQu8FPiDIPIX7x9500Anv1tmFH');
+
+const showToast = (message) => {
+    toast.info(message, {
+      position: "top-center",
+      autoClose: 3000, // milliseconds
+    });
+  };
 
 const Donate = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -31,8 +40,10 @@ const Donate = () => {
             const data = await response.json();
             setClientSecret(data.clientSecret);
             setIsPopupOpen(false);
+            showToast("Thank you for your Donation!");
         } catch (error) {
             console.error('Error creating payment intent:', error);
+            showToast("An unexpected error occurred. Please try again later.");
         }
     };
 
@@ -112,6 +123,7 @@ const Donate = () => {
 const WrappedDonate = () => (
     <Elements stripe={stripePromise}>
         <Donate />
+        <ToastContainer />
     </Elements>
 );
 
