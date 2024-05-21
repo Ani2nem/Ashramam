@@ -22,6 +22,8 @@ const Donate = () => {
     const elements = useElements();
     const popupRef = useRef(null);
 
+
+
     const handleDonateClick = () => {
         setIsPopupOpen(true);
     };
@@ -48,6 +50,7 @@ const Donate = () => {
             });
             const data = await response.json();
             setClientSecret(data.clientSecret);
+            console.log(clientSecret);
             setIsPopupOpen(false);
             showToast("Thank you for your Donation!");
         } catch (error) {
@@ -92,8 +95,14 @@ const Donate = () => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [isPopupOpen]);
+    }, [isPopupOpen, clientSecret]);
 
+    const paymentElementOptions = {
+        layout: "tabs"
+      }    
+
+
+   
     return (
         <section className='donate-section'>
             <h1 id="Donate" className='donation-title'>Contribute to Our Sai Baba Ashramam</h1>
@@ -115,19 +124,30 @@ const Donate = () => {
                             placeholder='Enter amount in Rupees'
                         />
                         <button onClick={handleConfirmDonation}>Confirm Donation</button>
+                        
                     </div>
                 </div>
             )}
 
-            {clientSecret && (
+
+                {clientSecret ? (
                 <form onSubmit={handleSubmit}>
-                    <CardElement />
-                    <button type="submit" disabled={!stripe}>Pay</button>
+                    <CardElement options={{paymentElementOptions}} />
+                    <button type="submit" disabled={!stripe} >Pay</button>
                 </form>
-            )}
+            ) : null}
+            
         </section>
     );
 };
+
+
+
+
+
+
+
+
 
 const WrappedDonate = () => (
     <Elements stripe={stripePromise}>
