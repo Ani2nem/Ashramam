@@ -1,0 +1,47 @@
+/* Payment container styles */
+.payment-container {
+    position: absolute;
+    top: 15vw;
+    left: 25vw;
+    width: 50%;
+    background-color: rgb(245, 245, 255);
+    border-radius: 20px;
+    border: 3px solid black; /* Changed border style for clarity */
+    height: 28vw;
+  }
+  
+  .payment-container h2 {
+    position: absolute;
+    top: -6.5vw;
+    left: 7.8vw;
+    font-size: 2.8vw;
+  }
+  
+  /* Stripe card element styles */
+  .stripe-card-element {
+    position: relative;
+    top: 5vw;
+    padding: 1rem; /* Add padding for spacing */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically within available space */
+  }
+  
+  /* Input fields (name and address) */
+  .stripe-card-element input[type="text"] {
+    width: 100%; /* Make input fields take up full width */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem; /* Add some margin for spacing */
+    font-size: 1rem; /* Increase font size for inputs */
+  }
+  
+  /* Card element styles (potentially adjust based on Stripe's styles) */
+  .stripe-card-element .StripeElement { /* Target Stripe's card element class */
+    width: 100%; /* Make card element take up full width */
+    height: 4rem; /* Increase card element height (adjust as needed) */
+    font-size: 1rem; /* Increase font size for card element */
+  }
+  

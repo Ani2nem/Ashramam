@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import './Payment.css'
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState('');
@@ -33,12 +34,21 @@ const Payment = () => {
     }
   };
 
+  const appearance = {
+    theme: 'stripe',
+  };
+  
+  const options = {
+    clientSecret,
+    appearance, // Assuming you already defined the appearance object
+  };
+
   return (
     <div className="payment-container">
       <h2>Complete Your Donation</h2>
       <form onSubmit={handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>Pay</button>
+        <CardElement options={{ layout: { type: 'tabs' }}} className="stripe-card-element"  />
+        <button type="submit" disabled={!stripe} appearance={appearance} options={options}>Pay</button>
       </form>
     </div>
   );
