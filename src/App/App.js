@@ -11,7 +11,6 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe('pk_test_51PHyASJtWCb49VjheumpMIcYRN8CZ0osD5zxBceBKr9tJywy9wr8APhrbCUl2THuDnW3zk6QuQu8FPiDIPIX7x9500Anv1tmFH');
- 
 const appearance = {
   theme: 'stripe',
 };
@@ -31,18 +30,13 @@ function App() {
             <Footer />
             </>}/>
           <Route path="/payment" element={
-          <Elements stripe={stripePromise} options={{appearance}}>
-              <Payment />
-            </Elements>} /> {/* Route for Payment component */}
-
+          <Elements stripe={stripePromise} options={{appearance}} >
+            <Payment />
+          </Elements>}/>
         </Routes>
-
       </BrowserRouter>
     </div>
   );
 }
 
 export default App;
-
-
-
