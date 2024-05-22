@@ -16,11 +16,12 @@
 .about-text{
     position: relative;
     left: 50%;
+    top: 0.3vw;
     max-width: 47vw;
     font-size: 1.7vw;
     font-family: sans-serif;
     font-weight: 600;
-    line-height: 2.8vw;
+    line-height: 2vw;
     text-align: left;
     color: black;
     margin-top: 4vw;

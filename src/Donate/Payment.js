@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
+import { ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 import './Payment.css';
+
+const showToast = (message) => {
+  toast.info(message, {
+    position: "top-center",
+    autoClose: 3000, // milliseconds
+  });
+};
+
+
 
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState('');
@@ -9,6 +21,7 @@ const Payment = () => {
   const [address, setAddress] = useState('');
   const stripe = useStripe();
   const elements = useElements();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -40,11 +53,18 @@ const Payment = () => {
       // Handle payment error
     } else if (paymentIntent.status === 'succeeded') {
       console.log('Payment succeeded!');
+      showToast("Thank you for your Donation!");
+      // Redirect to home page.
+      setTimeout(() => {
+        navigate(`/`);
+      }, 4000);
       // Handle successful payment (e.g., display success message, redirect)
     }
   };
 
   return (
+    <>
+    <ToastContainer/>
     <div className="payment-container">
       <h2>Complete Your Donation</h2>
       <form onSubmit={handleSubmit}>
@@ -83,6 +103,8 @@ const Payment = () => {
         <button className="pay-button" type="submit" disabled={!stripe}>Donate</button>
       </form>
     </div>
+
+    </>
   );
 };
 

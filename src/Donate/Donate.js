@@ -44,7 +44,6 @@ const Donate = () => {
 
       // Redirect to payment page with clientSecret as a query parameter
       navigate(`/payment?clientSecret=${data.clientSecret}`);
-      showToast("Thank you for your Donation!");
     } catch (error) {
       console.error('Error creating payment intent:', error);
       showToast("An unexpected error occurred. Please try again later.");
@@ -86,7 +85,7 @@ const Donate = () => {
               type='number'
               value={amount}
               onChange={handleAmountChange}
-              placeholder='Enter amount in Rupees'
+              placeholder='Enter amount in USD'
             />
             <button onClick={handleConfirmDonation}>Confirm Donation</button>
           </div>

@@ -19,9 +19,7 @@ const Events = () => {
     }
 
   const otherEvents = [
-    { start: new Date(), end: new Date(), title: 'Post video' },
-    { start: new Date(), end: new Date(), title: 'Edit video' },
-    { start: new Date(), end: new Date(), title: 'Code' },
+    // if events are going to occur today;
   ];
 
   const allEvents = [...recurringThursdays, ...otherEvents];
